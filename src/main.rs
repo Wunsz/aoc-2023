@@ -2,15 +2,19 @@ use std::env;
 
 mod d01;
 mod d02;
+mod d03;
 
 fn run_day_and_puzzle(day: i32, puzzle: i32) {
     let file = format!("./src/d{:02}/input.in", day);
 
-    match day {
-        1 => d01::run(puzzle, file),
-        2 => d02::run(puzzle, file),
+    let run = match day {
+        1 => d01::run,
+        2 => d02::run,
+        3 => d03::run,
         _ => panic!("Invalid day!")
-    }
+    };
+
+    run(puzzle, file);
 }
 
 fn main() {
