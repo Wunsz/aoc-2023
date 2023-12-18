@@ -8,6 +8,7 @@ mod d04;
 mod d05;
 mod d06;
 mod d07;
+mod d08;
 
 fn run_day_and_puzzle(day: i32, puzzle: i32) {
     let file = format!("./src/d{:02}/input.in", day);
@@ -20,6 +21,7 @@ fn run_day_and_puzzle(day: i32, puzzle: i32) {
         5 => d05::run,
         6 => d06::run,
         7 => d07::run,
+        8 => d08::run,
         _ => panic!("Invalid day!")
     };
 
